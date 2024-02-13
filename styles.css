@@ -1,0 +1,626 @@
+/* Reset and Global Styles */
+* {
+  font-family: "General Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: 0.2s linear;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section starts */
+
+.hero {
+  margin: 5px;
+  padding: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  background-color: whitesmoke;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.header > a > img {
+  max-width: 100%;
+  margin-bottom: 10px;
+  height: 5rem;
+}
+
+.header > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.header > ul > li > a {
+  padding: 5px 20px;
+  font-weight: bold;
+  color: rgb(46, 45, 45);
+  font-size: 90%;
+}
+
+.header > ul > li > a:hover {
+  color: rgb(255, 115, 0);
+}
+
+.hero > .banner_container {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    url("assets/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 1rem;
+  margin: 5px;
+  padding: 20px;
+  width: 97%;
+  overflow-x: hidden;
+  height: calc(100vh - 7rem);
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+.hero > .banner_container > .banner_body {
+  margin: 5%;
+}
+
+.hero > .banner_container > .banner_body > .text-container #typing-animation {
+  color: black;
+  font-size: 4.5rem;
+  letter-spacing: 0.5rem;
+  margin: 2rem 5px;
+  padding: 4px;
+}
+
+.hero > .banner_container > .banner_body > .text-container {
+  display: inline-block;
+}
+
+.hero > .banner_container > .banner_body > p {
+  color: #000;
+  font-size: 1.5rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.hero > .banner_container > .banner_body > p > span {
+  font-size: 1.6rem;
+  margin: 1%;
+  font-weight: bold;
+}
+
+#typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: bolder;
+  border-right: 5px solid orange;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: monospace;
+  animation: typing 2s steps(14, end) infinite alternate,
+    cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  55% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+#typing-animation > span {
+  color: orangered;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    width: 95%;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    width: 96%;
+  }
+
+  .header > ul {
+    align-items: center;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .header > ul > li > a {
+    padding: 5px 5px;
+  }
+
+  .hero > .banner_container {
+    height: auto;
+    width: 88%;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .hero > .banner_container > .banner_body > .text-container #typing-animation {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .hero > .banner_container > .banner_body > p {
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  .hero > .banner_container > .banner_body > p > span {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    overflow-x: hidden;
+  }
+  .header {
+    width: 97.5%;
+  }
+  .hero > .banner_container {
+    height: auto;
+    width: 95%;
+  }
+}
+
+/* About Founder Section Starts  */
+
+.about-founder {
+  background-color: whitesmoke;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-founder > .founder-info {
+  margin: 10px;
+  padding: 10px;
+}
+
+.about-founder > .founder-info > h1 {
+  display: inline-block;
+  letter-spacing: 8px;
+  width: 101%;
+  white-space: nowrap;
+  color: #000;
+  font-size: 4rem;
+  font-weight: bolder;
+  border-right: 5px solid orange;
+  font-family: monospace;
+  overflow: hidden;
+  animation: typing 2s steps(14, end) infinite alternate,
+    cursor 0.4s step-end infinite alternate;
+  margin: 1rem 0;
+}
+
+.about-founder > .founder-info > p {
+  color: #000;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.8rem;
+}
+
+.about-founder > .founder-image {
+  /* height: 69vh; */
+  align-items: center;
+  margin: 1rem 5%;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 165, 0, 1),
+    rgba(255, 165, 0, 0)
+  );
+  border-radius: 10rem;
+}
+
+.about-founder > .founder-image > img {
+  background: transparent;
+  height: 70vh;
+}
+
+@media screen and (max-width: 768px) {
+  .about-founder {
+    height: auto;
+    display: block;
+  }
+
+  .about-founder > .founder-info {
+    text-align: center;
+    max-width: 100%;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .about-founder > .founder-info > h1 {
+    font-size: 1.2rem;
+    padding: 12px;
+    margin: 12px;
+  }
+
+  .about-founder > .founder-info > p {
+    font-size: 0.9rem;
+  }
+
+  .about-founder > .founder-image {
+    text-align: center;
+  }
+
+  .about-founder > .founder-image > img {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-founder {
+    height: auto;
+    padding: 5px;
+  }
+
+  .about-founder > .founder-info > h1 {
+    font-size: 2.5rem;
+    padding: 8px;
+  }
+
+  .about-founder > .founder-info > p {
+    font-size: 1.2rem;
+    padding-right: 1.4rem;
+  }
+
+  .about-founder > .founder-image > img {
+    height: 30vh;
+  }
+}
+
+/* <!-- Why to choose Darsheel? starts --> */
+
+#services {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  height: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#services > h1 {
+  margin: 10px;
+  padding: 10px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#services > p {
+  margin: 10px;
+  padding: 10px 3rem;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+#services > .reason {
+  margin: 10px auto;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+/* <!-- Why to choose Darsheel? starts --> */
+
+#services {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  height: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#services > h1 {
+  margin: 10px;
+  padding: 10px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#services > p {
+  margin: 10px;
+  padding: 10px 3rem;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+#services > .reason {
+  margin: 10px auto;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #services {
+    height: auto;
+  }
+
+  #services > h1 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  #services > p {
+    font-size: 1rem;
+    padding: 10px 1rem;
+  }
+
+  #services > .reason {
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #services > .reason > img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #services > .reason > img {
+    width: 98%;
+  }
+}
+
+/* <!-- Timer starts --> */
+
+.timer-section {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  /* height: 35vh; */
+}
+
+.timer-section h3 {
+  font-size: 2.5rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.timer-section h3 span {
+  font-weight: bold;
+  color: red;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f0ad4e;
+  border: 2px solid #f0ad4e;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.timer #minutes {
+  margin-right: 10px;
+}
+
+.timer #seconds {
+  margin-left: 10px;
+}
+
+.timer {
+  animation: alarm-animation 0.5s infinite alternate;
+  background-color: #d9534f;
+  color: #fff;
+}
+
+@keyframes alarm-animation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.sign-up-btn {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.sign-up-btn > a {
+  cursor: pointer;
+  color: orangered;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* CTA Section starts */
+
+.cta-section {
+  margin: 10px;
+  padding: 10px;
+  background-color: #f3f5f4;
+  padding: 50px 0;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #363636;
+  font-family: "General Sans", sans-serif;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #363636;
+  font-family: "General Sans", sans-serif;
+}
+
+.cta-content button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #ffd166;
+  color: #363636;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "General Sans", sans-serif;
+}
+
+.cta-content button:hover {
+  background-color: #ffcc00;
+}
+
+/* Form container Starts here */
+
+.form-container {
+  position: fixed;
+  padding: 10px;
+  margin: 10px;
+  bottom: 20px;
+  left: calc(50% - 200px);
+  width: 320px;
+  background-color: rgb(241, 214, 163);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  cursor: move;
+  z-index: 1000;
+  transition: left 0.5s ease, bottom 0.5s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-container.hidden {
+  bottom: -100%;
+}
+
+.form-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-wrapper h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #363636;
+  font-family: "General Sans", sans-serif;
+}
+
+.form-wrapper p {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-wrapper > h3 > span {
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  color: #363636;
+}
+
+.form-wrapper > h3 > span > img {
+  height: 1rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"] {
+  width: 87%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"] {
+  background-color: #fff;
+}
+
+#signupForm button {
+  background-color: #f09d02;
+  color: #363636;
+  cursor: pointer;
+  width: 93%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#signupForm button:hover {
+  background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+  .timer-section h3,
+  .cta-content h2,
+  .cta-content p,
+  .form-wrapper h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.timer-section,
+.cta-section,
+.form-container,
+.benefits-container {
+  padding: 10px;
+}
